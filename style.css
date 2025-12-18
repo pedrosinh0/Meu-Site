@@ -1,0 +1,463 @@
+:root {
+    --branco: #ffffff;
+    --pretoclaro: #222222;
+    --pretoescuro: #1F1F1F;
+    --laranja: #F36B4E;
+    --laranjaclaro: #EF6E49;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--pretoclaro);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#m {
+    color: var(--branco);
+    padding: 10px 10px 10px 16px;         /* espaço interno */
+    font-size: 40px;
+    background-color: var(--laranja);
+    display: inline-block;
+}
+
+header {
+    padding-top: 40px;
+}
+
+header > div {
+    padding-left: 200px;    /* move para o meio horizontal */
+}
+
+#primeirotexto {
+    color: var(--branco);
+}
+
+#topo {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
+#botoestopo {
+    display: flex;
+    gap: 30px;
+}
+
+#botoes {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+#botoestopo a:hover {
+    transform: translateY(-2px);
+    color: var(--laranjaclaro);
+}
+
+#narutinho {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-left: 200px;
+    align-items: center;
+}
+
+#narutinho2 {
+    width: 150px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+}
+
+#sobrem {
+    color: var(--laranjaclaro);
+    padding-bottom: 10px;
+}
+
+#texto1 {
+    color: var(--branco);
+}
+
+#textonaruto {
+    margin-left: 200px;
+}
+
+#planos {
+    margin-top: 50px;
+    background-color: #161616;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 300px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#planosid {
+    color: var(--laranjaclaro);
+    padding-left: 200px;
+    padding-top: 40px;
+}
+
+#planostexto {
+    color: var(--branco);
+    padding-left: 200px;
+    padding-top: 5px;
+}
+
+#direitos {
+    padding: 20px;
+    color: var(--branco);
+    text-align: center;
+}
+
+#planos img {
+    margin-top: 30px;
+    border-radius: 10px; /* opcional */
+}
+
+/* Botão do menu */
+
+.menu-btn {
+  font-size: 28px;
+  cursor: pointer;
+  color: #ff6a3d;
+}
+
+/* Menu lateral */
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100vh;
+  background: linear-gradient(180deg, var(--pretoescuro), #0b0b0b);
+  padding: 35px 30px;
+  transition: right 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  z-index: 1000;
+  box-shadow: -12px 0 30px rgba(0,0,0,0.6);
+}
+
+.side-menu a {
+  color: #dcdcdc;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.side-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--laranja);
+  transition: width 0.3s ease;
+}
+
+.side-menu a:hover {
+  color: var(--branco);
+}
+
+.side-menu a:hover::after {
+  width: 100%;
+}
+
+.side-menu a:hover {
+  color: #ff6a3d;
+}
+
+/* Botão fechar */
+.close-btn {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 22px;
+  color: white;
+}
+
+.close-btn {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 22px;
+  color: #aaa;
+  margin-bottom: 30px;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: var(--branco);
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 320px;
+  height: 100vh;
+
+  background: linear-gradient(180deg, var(--pretoescuro), #0b0b0b);
+  padding: 35px 30px;
+
+  transform: translateX(100%);   /* fechado */
+  transition: transform 0.35s ease;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  z-index: 1000;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background: rgba(34, 34, 34, 0.75); /* seu pretoclaro com transparência */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  z-index: 1000;
+}
+
+body {
+  padding-top: 120px; /* ajuste fino se quiser */
+}
+
+header {
+  padding: 20px 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+
+    background: rgba(31, 31, 31, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+#topo {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+.menu-title {
+  color: var(--branco);
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.menu-divider {
+  width: 40px;
+  height: 2px;
+  background-color: var(--laranja);
+  margin-bottom: 10px;
+}
+
+.side-menu a {
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 18px;
+
+  padding: 10px 12px;
+  border-radius: 6px;
+
+  transition: 0.3s;
+}
+
+.side-menu a:hover {
+  background-color: rgba(243, 107, 78, 0.15);
+  color: var(--laranjaclaro);
+  transform: translateX(5px);
+}
+
+.close-btn {
+  align-self: flex-end;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--branco);
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: var(--laranja);
+  transform: rotate(90deg);
+}
+
+#network-section {
+  position: relative;
+  height: 300px;
+  background: #121212;
+  overflow: hidden;
+}
+
+#network {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#network-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* garante que o site fique acima do efeito */
+header, main, footer {
+  position: relative;
+  z-index: 2;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* ajuste se quiser */
+    backdrop-filter: blur(8px);
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+}
+
+#textonaruto {
+  background: rgba(31, 31, 31, 0.9);
+  border-left: 4px solid var(--laranja);
+
+  padding: 30px 35px;
+  border-radius: 10px;
+
+  max-width: 520px;
+}
+
+@media (max-width: 768px) {
+  #botoestopo {
+    display: none;
+  }
+
+  #topo {
+    padding: 0 16px;
+  }
+
+  #m {
+    font-size: 28px;
+    padding: 8px 12px;
+  }
+
+  header {
+    height: 64px;
+  }
+
+  body {
+    padding-top: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  #narutinho {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 40px;
+    gap: 30px;
+  }
+
+  #narutinho2 {
+    width: 120px;
+  }
+
+  #textonaruto {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 22px;
+  }
+
+  #sobrem {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #texto1 {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  #planos {
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 20px;
+  }
+
+  #planosid,
+  #planostexto {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-menu {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+#network-bg {
+  z-index: 0;
+}
+
+header, main, footer {
+  z-index: 2;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  background: rgba(31, 31, 31, 0.85);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.menu-btn {
+  position: relative;
+  z-index: 1100;
+}
